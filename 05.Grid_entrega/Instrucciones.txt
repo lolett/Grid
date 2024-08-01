@@ -1,0 +1,21 @@
+Enunciado de la práctica
+En esta práctica queremos que pongáis a prueba lo aprendido con display grid haciendo uso de esta propiedad de manera exclusiva a lo largo del proyecto.
+En base a esta imagen, debéis colocar los elementos en esta landing con la siguiente disposición:
+
+/image.png
+
+Para ello solo podremos hacer uso de grid
+No podremos ayudarnos en esta ocasión de position ni otro tipo de display, así potenciaremos nuestro ingenio a la hora de dominar esta propiedad.
+Para que sea un poco más sencillo, os dejamos la plantilla de HTML con la que arrancar este proyecto:
+Además os facilitaremos las imágenes y las propiedades principales para que no tengáis que buscar los colores y las fuentes:
+Es muy importante aplicar también un buen responsive
+
+Os dejamos una muestra de como quedaría en versión mobile. Para ello tendréis que modificar ciertas propiedades de grid para adaptar la aplicación:
+
+/image2.png
+
+Opcionalmente podéis customizar esta aplicación creando una propia bajo las mismas bases.
+Libertad creativa ante todo y de contenido, siempre y cuando sea basado en display: grid y todas las buenas prácticas posibles
+
+Entrega de la práctica
+Una vez terminada la práctica, hay que entregar el link del repositorio del proyecto a desarrollowebfp@thepower.education con el asunto "Entrega: Grid - Tu nombre".
