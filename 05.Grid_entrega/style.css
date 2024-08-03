@@ -17,74 +17,252 @@
 .grid-container {
   display: grid;
   align-items: center;
+  margin: 100px auto;
   justify-items: center;
   justify-content: center;
   align-content: center;
+  border-radius: 10px;
 }
 
 .commercial {
   width: 90%;
-  margin: auto;
-  margin-top: 100px;
+  margin: 100px auto;
   max-width: 800px;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 2%;
+  gap: var(--spacing);
 }
-
-.commercial > img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* Resto del CSS */
 
 header {
   grid-row: 1 / 3;
   grid-column: 1 / 2;
+  background-color: var(--blue-color);
+  color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: grid;
+  object-fit: fill;
+  object-position: fill;
 }
 
-header > h1 {
+header>h1 {
+  font-size: medium;
+  text-align: center;
+  font-size: 30px;
+}
+
+header>p {
+  font-size: 18px;
+  text-align: center;
+  margin: 10px;
 }
 
 .school {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
+  width: 100%;
+  height: 100%;
 }
 
 .student {
   grid-row: 1 / 2;
   grid-column: 3 / 4;
+  width: 100%;
+  height: 100%;
 }
 
 main {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+  background-color: white;
+  color: #2bc5cd;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+  border: var(--border);
+}
+
+main h2 {
+  font-size: 18px;
+  text-align: center;
 }
 
 .time {
   grid-row: 2 / 3;
   grid-column: 3 / 4;
+  width: 100%;
+  height: 100%;
 }
 
 .alumni {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
+  width: 100%;
+  height: 100%;
 }
 
-footer {
+.footer-container {
   grid-row: 3 / 4;
   grid-column: 2 / 4;
-  background-color: #ff693d;
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--orange-color);
+  border-radius: 10px;
+}
+
+footer h3 {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+  color: var(--primary-color);
+}
+
+footer p {
+  font-size: 14px;
+  margin: 20px 10px;
+  color: var(--primary-color);
+}
+
+footer button {
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-weight: bold;
+  border: 1px;
+  cursor: pointer;
+}
+
+.alumni img,
+.school img,
+.student img,
+.time img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.alumni,
-.school,
-.student,
-.time {
-  background-size: cover;
+@media (max-width: 1024px) {
+  .commercial {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  header {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+  }
+
+  .school {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+
+  .student {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+  }
+
+  main {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+  }
+
+  .time {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+  }
+
+  .alumni {
+    grid-row: 4 / 5;
+    grid-column: 1 / 2;
+  }
+
+  .footer-container {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .commercial {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    gap: 1%
+  }
+
+  header,
+  .school,
+  .student,
+  main,
+  .time,
+  .alumni,
+  .footer-container {
+    grid-column: 1 / 2;
+  }
+
+
+  header {
+    grid-row: 1 / 3;
+  }
+
+  header h2 {
+    font-size: 80px;
+  }
+
+  header p {
+    font-size: 30px;
+  }
+
+  .school {
+    grid-row: 3 / 4;
+  }
+
+  .student {
+    grid-row: 4 / 5;
+  }
+
+  main {
+    grid-row: 5 / 6;
+  }
+
+  .time {
+    grid-row: 6 / 7;
+  }
+
+  .alumni {
+    grid-row: 7 / 8;
+  }
+
+  .footer-container {
+    grid-row: 8 / 9;
+    height: 100%;
+    width: 100%;
+  }
+
+  footer h3 {
+    font-size: 40px;
+  }
+
+  footer p {
+    font-size: 20px;
+  }
+
+  footer button {
+    max-width: 90%;
+  }
 }
